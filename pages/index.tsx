@@ -12,6 +12,7 @@ import CustomButton from '@/components/shared/CustomButton'
 import { LuSearch } from 'react-icons/lu'
 import UserList from '@/components/user/UserList'
 import UserItem from '@/components/user/UserItem'
+import Link from 'next/link'
 
 export default function Home() {
   const [search, setSearch] = useState('')
@@ -45,9 +46,9 @@ export default function Home() {
     <div className='flex flex-col  min-h-screen  md:py-10 items-center gap-20 p-4 bg-github text-white '>
       <div className='flex flex-col w-full items-center gap-10'>
         <div className='flex items-center gap-5' >
-          <a href="/">
+          <Link href="/">
             <BsGithub size={isDesktop ? 200 : 100} />
-          </a>
+          </Link>
           <h1 className='md:text-3xl text-xl md:w-52'>Find users on <span className='font-bold'>Github</span></h1>
         </div>
         <form className='flex gap-4' onSubmit={handleOnSearchSubmit}>
